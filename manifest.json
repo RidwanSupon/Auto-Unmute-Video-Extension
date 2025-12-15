@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Unmute Video",
+  "version": "2.0.0",
+  "description": "Automatically unmutes videos on selected websites so you never need to enable sound manually.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://lok-lok.cc/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
